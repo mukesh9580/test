@@ -1,0 +1,6 @@
+SELECT rja.jobAllocationId,rja.jobCode,rja.actual_allocation,rja.allocation,(SELECT count(tem.empId) FROM tbl_emp_master tem left join tbl_candidate can on tem.candidateId=can.id where can.jobCode=rja.jobCode) as employee  FROM recruit_job_allocation rja WHERE rja.clientId = 7 AND rja.jobCodeShow = 1
+
+
+62665,62666--90144
+
+feswf
